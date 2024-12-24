@@ -1,6 +1,11 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import { Post } from '../model/post'
 import { USERS } from '../data/users';
+import { router } from 'expo-router';
+import { ROUTES } from '../routes';
+import { useAppDispatch } from '../store';
+import { CurrentPostActions } from '../store/features/currentPost';
+import { CurrentUserActions } from '../store/features/currentUser';
 
 type Props = {
     post: Post;
@@ -8,12 +13,19 @@ type Props = {
 
 const PostCard = (props: Props) => {
     const { post } = props;
+    const dispatch = useAppDispatch()
 
     const userInfo = USERS.find(user => user.id === post.user)
 
 
+    const goToPostDetail = () => {
+        dispatch(CurrentPostActions.setCurrentPost(post))
+        router.push(ROUTES.POST)
+    }
+
+
     return (
-        <View style={styles.container}>
+        <TouchableOpacity onPress={goToPostDetail} style={styles.container}>
             <View style={styles.photoContainer} >
                 <View style={styles.photo} />
             </View>
@@ -22,7 +34,7 @@ const PostCard = (props: Props) => {
                 <Text>{userInfo?.firstName} {userInfo?.lastName} @{userInfo?.username} </Text>
                 <Text>{post.text} </Text>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 
@@ -42,7 +54,7 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.2,
         shadowRadius: 5,
-        elevation:2
+        elevation: 2
     },
     photoContainer: {
         height: '100%',

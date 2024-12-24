@@ -11,7 +11,7 @@ export const POSTS: Post[] = [
     },
     {
         id: 'PostB',
-        user: 'User1',
+        user: 'User2',
         text: 'This is my second post',
         createdDate: Date.now() - MILLISECONDS_IN_HOUR
     },
@@ -23,8 +23,44 @@ export const POSTS: Post[] = [
     },
     {
         id: 'PostD',
-        user: 'User1',
+        user: 'User3',
         text: 'This is my 4th post',
         createdDate: Date.now() - 3 * MILLISECONDS_IN_HOUR
+    },
+    {
+        id: 'PostE',
+        user: 'User1',
+        text: 'This is my 5th post',
+        createdDate: Date.now() - 4 * MILLISECONDS_IN_HOUR
+    },
+    {
+        id: 'PostF',
+        user: 'User2',
+        text: 'This is my 6th post',
+        createdDate: Date.now() - 5 * MILLISECONDS_IN_HOUR
+    },
+    {
+        id: 'PostG',
+        user: 'User1',
+        text: 'This is my 7th post',
+        createdDate: Date.now() - 6 * MILLISECONDS_IN_HOUR
+    },
+    {
+        id: 'PostH',
+        user: 'User3',
+        text: 'This is my 8th post',
+        createdDate: Date.now() - 7 * MILLISECONDS_IN_HOUR
+    },
+    {
+        id: 'PostI',
+        user: 'User1',
+        text: 'This is my 7th post',
+        createdDate: Date.now() - 6 * MILLISECONDS_IN_HOUR
+    },
+    {
+        id: 'PostJ',
+        user: 'User3',
+        text: 'This is my 8th post',
+        createdDate: Date.now() - 7 * MILLISECONDS_IN_HOUR
     },
 ]
