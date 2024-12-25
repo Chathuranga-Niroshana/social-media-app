@@ -12,6 +12,6 @@ export default function Root() {
     dispatch(PostActions.addPosts(POSTS))
   }, [])
   return (
-    <Redirect href={ROUTES.HOME} />
+    <Redirect href={ROUTES.ROOT} />
   );
 }

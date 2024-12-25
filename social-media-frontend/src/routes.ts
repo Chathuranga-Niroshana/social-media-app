@@ -1,5 +1,7 @@
 export enum ROUTES {
     HOME = 'home/',
     POST = 'post/',
-    USER = 'user/'
+    USER = 'user/',
+    ROOT = 'root/',
+    SIGN_UP = 'signup/',
 }
