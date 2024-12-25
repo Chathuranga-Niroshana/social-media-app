@@ -6,7 +6,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "lint": "eslint --fix . -c .js,.ts,.tsx"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",
@@ -26,6 +27,9 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~18.3.12",
+    "eslint": "^9.17.0",
+    "eslint-config-universe": "^14.0.0",
+    "prettier": "^3.4.2",
     "typescript": "^5.3.3"
   },
   "private": true

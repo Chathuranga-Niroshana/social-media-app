@@ -7,7 +7,7 @@ const initialState: CurrentPostInitialState = {
     id: '',
     text: '',
     user: '',
-    createdDate: Date.now()
+    createdDate: Date.now(),
 }
 
 export const currentPost = createSlice({

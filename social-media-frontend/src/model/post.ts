@@ -3,5 +3,4 @@ export type Post = {
     user: string, //User.id
     text: string
     createdDate: number
-
 }

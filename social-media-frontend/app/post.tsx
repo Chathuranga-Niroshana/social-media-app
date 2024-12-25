@@ -1,13 +1,12 @@
-import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import { Post } from '../src/model/post'
 import { useAppDispatch, useAppSelector } from '../src/store'
 import { router } from 'expo-router'
 import { USERS } from '../src/data/users'
 import { CurrentUserActions } from '../src/store/features/currentUser'
 import { ROUTES } from '../src/routes'
-
-
+import Header from '../src/components/Header'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 
 const PostDetailPage = () => {
@@ -25,21 +24,35 @@ const PostDetailPage = () => {
     }
 
     return (
-        <SafeAreaView>
-            <TouchableOpacity onPress={goBack}>
-                <Text>go back</Text>
-            </TouchableOpacity>
+        <SafeAreaView style={styles.safeAreaView} edges={['top']}>
+            <Header
+                leftButton={{
+                    onPress: goBack,
+                    child: null
+                }}
+                showLogo
+            />
 
-            <TouchableOpacity onPress={goToUserPage}>
-                <Text>{userInfo?.username}</Text>
-            </TouchableOpacity>
-            <Text>Post Details Page</Text>
-            <Text>{currentPost.text}</Text>
-
+            <View style={styles.main}>
+                <TouchableOpacity onPress={goToUserPage}>
+                    <Text>{userInfo?.firstName} {userInfo?.lastName}</Text>
+                </TouchableOpacity>
+                <Text>Post Details Page</Text>
+                <Text>{currentPost.text}</Text>
+            </View>
         </SafeAreaView>
     )
 }
 
 export default PostDetailPage
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    safeAreaView: {
+        flex: 1,
+    },
+    main: {
+        flex: 1,
+        backgroundColor: 'white',
+        padding: 10,
+    }
+})
