@@ -17,7 +17,7 @@ const Profile = () => {
                 </View>
                 {/* user info column */}
                 <View style={styles.userInfoColumn}>
-                    <Text style={styles.name}>{myUser.firstName} {myUser.lastName} </Text>
+                    <Text style={styles.name}>{myUser.name} </Text>
                     <Text style={styles.username}>@{myUser.username}</Text>
                     <Text style={styles.bio}>{myUser.bio} </Text>
                 </View>

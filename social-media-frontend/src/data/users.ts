@@ -3,23 +3,23 @@ import { User } from "../model/user";
 export const USERS: User[] = [
     {
         id: 'User1',
-        firstName: 'Chathuranga',
-        lastName: 'Niroshana',
+        name: 'Chathuranga Niroshana',
         username: 'chathuranga',
-        bio: 'Software Engineer ~ @React JS @Node JS @Express JS @Python @Java @PHP @JavaScript @TypeScript'
+        bio: 'Software Engineer ~ @React JS @Node JS @Express JS @Python @Java @PHP @JavaScript @TypeScript',
+        email: 'abs@gmail.com',
     },
     {
         id: 'User2',
-        firstName: 'John',
-        lastName: 'Doe',
+        name: 'John Doe',
         username: 'jdoe',
-        bio: 'Software Engineer ~ @React JS @Node JS @Express JS @Python @Java @PHP @JavaScript @TypeScript'
+        bio: 'Software Engineer ~ @React JS @Node JS @Express JS @Python @Java @PHP @JavaScript @TypeScript',
+        email: 'abs@gmail.com',
     },
     {
         id: 'User3',
-        firstName: 'Bruce',
-        lastName: 'Wayne',
+        name: 'Bruce Wayne',
         username: 'batman',
-        bio: 'Software Engineer ~ @React JS @Node JS @Express JS @Python @Java @PHP @JavaScript @TypeScript'
+        bio: 'Software Engineer ~ @React JS @Node JS @Express JS @Python @Java @PHP @JavaScript @TypeScript',
+        email: 'abs@gmail.com',
     },
 ]

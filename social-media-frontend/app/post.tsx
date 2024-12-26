@@ -35,7 +35,7 @@ const PostDetailPage = () => {
 
             <View style={styles.main}>
                 <TouchableOpacity onPress={goToUserPage}>
-                    <Text>{userInfo?.firstName} {userInfo?.lastName}</Text>
+                    <Text>{userInfo?.name} </Text>
                 </TouchableOpacity>
                 <Text>Post Details Page</Text>
                 <Text>{currentPost.text}</Text>

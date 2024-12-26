@@ -31,7 +31,7 @@ const PostCard = (props: Props) => {
             </View>
 
             <View style={styles.content} >
-                <Text>{userInfo?.firstName} {userInfo?.lastName} @{userInfo?.username} </Text>
+                <Text>{userInfo?.name}  @{userInfo?.username} </Text>
                 <Text>{post.text} </Text>
             </View>
         </TouchableOpacity>
